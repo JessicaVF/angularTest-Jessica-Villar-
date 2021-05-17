@@ -1,0 +1,16 @@
+<!-- une progressbar. -->
+<div [class.ferme]="incident?.open == false">
+  <section>
+    <div><span>Id:</span> {{incident?.id}}</div>
+    <div><button [routerLink]="['/incident', incident?.id]">Plus d'info</button></div>
+  </section>
+  <section>
+    <div><span>Titre: </span>{{incident?.titre}}</div>
+    <div><span>Level: </span>Le {{incident?.level}}</div>
+  </section>
+  <section>
+    <div><span>Type: </span>{{incident?.type}}</div>
+    <div><span>Date de creation: </span>Le {{incident?.dateCreation}}
+    </div>
+  </section>
+</div>
