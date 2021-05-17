@@ -20,4 +20,7 @@ export class ApiIncidentService {
   getOne(id: number): Observable<Incident> {
     return this.http.get<Incident>(`http://localhost:8080/learn/api/incidents/${id}`);
   }
+  delete(id: number): Observable<any>{
+    return this.http.delete(`http://localhost:8080/learn/api/incidents/${id}`);
+  }
 }
