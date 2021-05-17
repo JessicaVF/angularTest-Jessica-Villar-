@@ -1,0 +1,27 @@
+h2 {
+  margin-top: 2%;
+}
+.error {
+  border: orange;
+  background-color: red;
+  color: white;
+}
+.error ul {
+  list-style: none;
+  display: flex;
+}
+.error ul li {
+  padding: 2% 2%;
+}
+section {
+  display: flex;
+}
+label {
+  font-style: italic;
+}
+input {
+  height: 25px;
+}
+button {
+  margin-top: 2%;
+}

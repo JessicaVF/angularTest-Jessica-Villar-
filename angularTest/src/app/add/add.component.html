@@ -2,13 +2,16 @@
 <form [formGroup]="incidentForm" (ngSubmit)="submitForm()">
   <div class="error" *ngIf="!incidentForm.valid && formSubmitted">
     <ul>
-      <li *ngIf="!incidentForm.controls.description.valid">Description invalide</li>
-      <li *ngIf="!incidentForm.controls.email.valid">Email invalide</li>
-      <li *ngIf="!incidentForm.controls.level.valid">Level invalide</li>
-      <li *ngIf="!incidentForm.controls.open.valid">Open invalid</li>
-      <li *ngIf="!incidentForm.controls.progress.valid">Progress invalide</li>
-      <li *ngIf="!incidentForm.controls.titre.valid">Titre invalide</li>
-      <li *ngIf="!incidentForm.controls.type.valid">Type invalide</li>
+
+      <li *ngIf="!incidentForm.controls.description.valid">Description invalidade</li>
+      <li *ngIf="!incidentForm.controls.email.valid">Email invalidade</li>
+
+      <li *ngIf="!incidentForm.controls.level.valid">Level invalidade</li>
+      <li *ngIf="!incidentForm.controls.open.valid">Open invalidade</li>
+
+      <li *ngIf="!incidentForm.controls.progress.valid">Progress invalidade</li>
+      <li *ngIf="!incidentForm.controls.titre.valid">Titre invalidade</li>
+      <li *ngIf="!incidentForm.controls.type.valid">Type invalidade</li>
     </ul>
   </div>
   <section>
@@ -17,26 +20,26 @@
       <input id="description" type="text" formControlName="description" />
     </div>
     <div>
-      <label for="email">email:</label>
+      <label for="email">Email:</label>
       <input id="email" type="text" formControlName="email" />
     </div>
     <div>
-      <label for="level">level</label>
+      <label for="level">Level</label>
       <select formControlName="level">
         <!-- <option *ngFor="let level of levels" [ngValue]="level.id">{{level.name}}</option> -->
         <option *ngFor="let level of levels">{{level}}</option>
       </select>
     </div>
     <div>
-      <label for="open">open:</label>
+      <label for="open">Open:</label>
       <input id="open" type="checkbox" formControlName="open" />
     </div>
     <div>
-      <label for="progress">progress:</label>
+      <label for="progress">Progress:</label>
       <input id="progress" type="number" formControlName="progress" />
     </div>
     <div>
-      <label for="titre">titre:</label>
+      <label for="titre">Titre:</label>
       <input id="titre" type="text" formControlName="titre" />
     </div>
     <div>
