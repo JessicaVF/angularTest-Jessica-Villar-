@@ -1,5 +1,4 @@
-<!-- une progressbar. -->
-<div
+<div id="body"
   [ngClass]="{'fatal': incident?.level == 'FATAL', 'error': incident?.level == 'ERROR', 'medium': incident?.level == 'MEDIUM', 'minor':  incident?.level == 'MINOR', 'ferme': incident?.open == false}">
   <section>
     <div><span>Id:</span> {{incident?.id}}</div>
@@ -14,8 +13,10 @@
     <div><span>Date de creation: </span>Le {{incident?.dateCreation}}
     </div>
   </section>
-  <h5>Progress:</h5>
-  <p>
-    <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
-  </p>
+  <section>
+    <h5>Progress:</h5>
+    <p>
+      <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
+    </p>
+  </section>
 </div>

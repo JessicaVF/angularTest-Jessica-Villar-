@@ -13,3 +13,16 @@
 .ferme {
   background-color: #fafafa;
 }
+#body {
+  border: 2px solid black;
+  margin: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+button {
+  margin-top: 3%;
+}
+span {
+  font-style: italic;
+}

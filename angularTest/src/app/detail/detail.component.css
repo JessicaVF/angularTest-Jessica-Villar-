@@ -1,0 +1,14 @@
+div {
+  margin-top: 2%;
+}
+#progressBar {
+  width: 50%;
+  margin: 2% 25%;
+}
+span {
+  font-style: italic;
+  color: darkcyan;
+}
+h5 {
+  font-style: italic;
+}

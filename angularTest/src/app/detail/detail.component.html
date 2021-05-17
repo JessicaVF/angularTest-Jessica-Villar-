@@ -1,16 +1,20 @@
-<h2> Incident {{incident?.id}} details: </h2>
+<div>
+  <h2> Incident {{incident?.id}} details: </h2>
 
-<p>ID: {{incident?.id}}</p>
-<p>Titre: {{incident?.titre}}</p>
-<p>Email: {{incident?.email}}</p>
-<p>Description: {{incident?.description}}</p>
-<p>Level: {{incident?.level}}</p>
-<p>Type: {{incident?.type}}</p>
-<p>Progress: {{incident?.progress}}</p>
-<p>Date Creation: {{incident?.dateCreation}}</p>
-<p>Date Modification: {{incident?.dateModification}}</p>
-<h5>Progress:</h5>
-<p>
-  <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
-</p>
-<button (click)="delete()"> Delete l'incident</button>
+  <p> <span>ID: </span> {{incident?.id}}</p>
+  <p> <span>Titre:</span> {{incident?.titre}}</p>
+  <p> <span>Email:</span> {{incident?.email}}</p>
+  <p> <span>Description:</span> {{incident?.description}}</p>
+  <p> <span>Level:</span> {{incident?.level}}</p>
+  <p> <span>Type:</span> {{incident?.type}}</p>
+  <p> <span>Progress:</span> {{incident?.progress}}</p>
+  <p> <span>Date Creation:</span> {{incident?.dateCreation}}</p>
+  <p> <span>Date Modification:</span> {{incident?.dateModification}}</p>
+
+  <h5>Progress:</h5>
+
+  <p id="progressBar">
+    <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
+  </p>
+  <button (click)="delete()"> Delete l'incident</button>
+</div>
