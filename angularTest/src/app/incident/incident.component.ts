@@ -15,6 +15,5 @@ export class IncidentComponent implements OnInit {
 constructor(private apiService: ApiIncidentService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.incident.open)
   }
 }
