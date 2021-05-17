@@ -16,8 +16,8 @@ export class ApiIncidentService {
   add(value: Incident): Observable<any[]> {
     return this.http.post<any[]>('http://localhost:8080/learn/api/incidents', value);
   }
-  // maybe i will have problem with arg id because in my declaration is a string
+
   getOne(id: number): Observable<Incident> {
-    return this.http.get<Incident>(`http://localhost:8080/learn/api/incidents${id}`);
+    return this.http.get<Incident>(`http://localhost:8080/learn/api/incidents/${id}`);
   }
 }
