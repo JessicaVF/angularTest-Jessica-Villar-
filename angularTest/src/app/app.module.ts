@@ -8,6 +8,7 @@ import { ListIncidentsComponent } from './list-incidents/list-incidents.componen
 import { RouterModule, Routes } from '@angular/router';
 import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
 { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

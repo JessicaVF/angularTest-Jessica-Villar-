@@ -1,1 +1,52 @@
-<p>add works!</p>
+<h2>Ajouter un incident</h2>
+<form [formGroup]="incidentForm" (ngSubmit)="submitForm()">
+  <div class="error" *ngIf="!incidentForm.valid && formSubmitted">
+    <ul>
+      <li *ngIf="!incidentForm.controls.description.valid">Description invalide</li>
+      <li *ngIf="!incidentForm.controls.email.valid">Email invalide</li>
+      <li *ngIf="!incidentForm.controls.level.valid">Level invalide</li>
+      <li *ngIf="!incidentForm.controls.open.valid">Open</li>
+      <li *ngIf="!incidentForm.controls.progress.valid">Progress</li>
+      <li *ngIf="!incidentForm.controls.titre.valid">Titre</li>
+      <li *ngIf="!incidentForm.controls.type.valid">Type</li>
+    </ul>
+  </div>
+  <section>
+    <div>
+      <label for="description">Description:</label>
+      <input id="description" type="text" formControlName="description" />
+    </div>
+    <div>
+      <label for="email">email:</label>
+      <input id="email" type="text" formControlName="email" />
+    </div>
+    <div>
+      <label for="level">level</label>
+      <select formControlName="level">
+        <option *ngFor="let level of levels" [ngValue]="level.id">{{level.name}}</option>
+      </select>
+    </div>
+    <div>
+      <label for="open">open:</label>
+      <input id="open" type="checkbox" formControlName="open" />
+    </div>
+    <div>
+      <label for="progress">progress:</label>
+      <input id="progress" type="number" formControlName="progress" />
+    </div>
+    <div>
+      <label for="titre">titre:</label>
+      <input id="titre" type="text" formControlName="titre" />
+    </div>
+    <div>
+      <label for="type">Type</label>
+      <select formControlName="type">
+        <option *ngFor="let type of types" [ngValue]="type.id">{{type.name}}</option>
+      </select>
+    </div>
+
+  </section>
+  <div>
+    <button type="submit">Ajouter</button>
+  </div>
+</form>
