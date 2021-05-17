@@ -1,5 +1,6 @@
 <!-- une progressbar. -->
-<div [class.ferme]="incident?.open == false">
+<div
+  [ngClass]="{'fatal': incident?.level == 'FATAL', 'error': incident?.level == 'ERROR', 'medium': incident?.level == 'MEDIUM', 'minor':  incident?.level == 'MINOR', 'ferme': incident?.open == false}">
   <section>
     <div><span>Id:</span> {{incident?.id}}</div>
     <div><button [routerLink]="['/detail', incident?.id]">Plus d'info</button></div>
@@ -14,4 +15,3 @@
     </div>
   </section>
 </div>
-<button (click)="delete()"> Delete l'incident</button>

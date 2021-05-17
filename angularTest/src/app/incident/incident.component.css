@@ -1,0 +1,15 @@
+.fatal {
+  background-color: #ffb2b2;
+}
+.error {
+  background-color: #f5c6c6;
+}
+.medium {
+  background-color: #ffd3b2;
+}
+.minor {
+  background-color: #ffecb2;
+}
+.ferme {
+  background-color: #fafafa;
+}

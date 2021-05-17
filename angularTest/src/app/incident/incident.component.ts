@@ -14,9 +14,6 @@ export class IncidentComponent implements OnInit {
 constructor(private apiService: ApiIncidentService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.incident.open)
   }
-delete(){
-  this.apiService.delete(this.incident.id).subscribe();
-  this.router.navigate(['/incidents'])
-}
 }

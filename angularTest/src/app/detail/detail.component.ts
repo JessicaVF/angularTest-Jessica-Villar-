@@ -17,8 +17,7 @@ export class DetailComponent implements OnInit {
     this.apiService.getOne(+id).subscribe(v => this.incident = v);
   }
   delete(){
-    this.apiService.delete(this.incident.id).subscribe();
-    this.router.navigate(['/incidents'])
+    this.apiService.delete(this.incident.id).subscribe(v => this.router.navigate(['/incidents']));
   }
 
 }
