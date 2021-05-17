@@ -5,10 +5,10 @@
       <li *ngIf="!incidentForm.controls.description.valid">Description invalide</li>
       <li *ngIf="!incidentForm.controls.email.valid">Email invalide</li>
       <li *ngIf="!incidentForm.controls.level.valid">Level invalide</li>
-      <li *ngIf="!incidentForm.controls.open.valid">Open</li>
-      <li *ngIf="!incidentForm.controls.progress.valid">Progress</li>
-      <li *ngIf="!incidentForm.controls.titre.valid">Titre</li>
-      <li *ngIf="!incidentForm.controls.type.valid">Type</li>
+      <li *ngIf="!incidentForm.controls.open.valid">Open invalid</li>
+      <li *ngIf="!incidentForm.controls.progress.valid">Progress invalide</li>
+      <li *ngIf="!incidentForm.controls.titre.valid">Titre invalide</li>
+      <li *ngIf="!incidentForm.controls.type.valid">Type invalide</li>
     </ul>
   </div>
   <section>
@@ -23,7 +23,8 @@
     <div>
       <label for="level">level</label>
       <select formControlName="level">
-        <option *ngFor="let level of levels" [ngValue]="level.id">{{level.name}}</option>
+        <!-- <option *ngFor="let level of levels" [ngValue]="level.id">{{level.name}}</option> -->
+        <option *ngFor="let level of levels">{{level}}</option>
       </select>
     </div>
     <div>
@@ -41,7 +42,8 @@
     <div>
       <label for="type">Type</label>
       <select formControlName="type">
-        <option *ngFor="let type of types" [ngValue]="type.id">{{type.name}}</option>
+        <!-- <option *ngFor="let type of types" [ngValue]="type.id">{{type.name}}</option> -->
+        <option *ngFor="let type of types">{{type}}</option>
       </select>
     </div>
 
