@@ -29,7 +29,7 @@ export class AddComponent implements OnInit {
     description: fb.control('', Validators.required),
     email: fb.control('', Validators.required),
     level: fb.control('', Validators.required),
-    open: fb.control('', Validators.required),
+    open: fb.control(''),
     progress: fb.control('', Validators.required),
     titre:  fb.control('', Validators.required),
     type: fb.control('', Validators.required)
@@ -40,6 +40,10 @@ export class AddComponent implements OnInit {
   }
   submitForm(): void {
     this.formSubmitted = true;
+    console.log("here");
+
+    console.log(this.incidentForm.value.open)
+    console.log("here");
     if (this.incidentForm.valid) {
       this.apiService.add(this.incidentForm.value).subscribe(r => this.route.navigate(['/incidents']));
     }
