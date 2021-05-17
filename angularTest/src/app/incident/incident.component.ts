@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ApiIncidentService } from '../api-incident.service';
 import { Incident } from '../models/incident';
 
+
 @Component({
   selector: 'app-incident',
   templateUrl: './incident.component.html',

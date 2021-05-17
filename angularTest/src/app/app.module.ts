@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
 { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

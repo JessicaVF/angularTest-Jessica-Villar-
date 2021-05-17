@@ -14,4 +14,8 @@
     <div><span>Date de creation: </span>Le {{incident?.dateCreation}}
     </div>
   </section>
+  <h5>Progress:</h5>
+  <p>
+    <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
+  </p>
 </div>

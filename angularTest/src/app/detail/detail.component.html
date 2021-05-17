@@ -9,4 +9,8 @@
 <p>Progress: {{incident?.progress}}</p>
 <p>Date Creation: {{incident?.dateCreation}}</p>
 <p>Date Modification: {{incident?.dateModification}}</p>
+<h5>Progress:</h5>
+<p>
+  <ngb-progressbar type="info" [value]="incident.progress"></ngb-progressbar>
+</p>
 <button (click)="delete()"> Delete l'incident</button>
