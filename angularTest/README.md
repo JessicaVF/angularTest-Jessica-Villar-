@@ -1,6 +1,7 @@
 # AngularTest
 # Note Exam: 17,5/20 
 ### Pas grand chose à dire, c'est très bien dans l'enssemble. Une petite confirmation avant suppression ca aurait été chouette, une modal encore mieux ;)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
 ## Development server
